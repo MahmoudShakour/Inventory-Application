@@ -1,0 +1,11 @@
+extends layout 
+
+block content   
+    title= title
+
+    div(class="content")
+       div= item.name 
+       div= item.description
+       div= "category: "+item.category.name
+       div= item.price+" $"
+       div= item.number_in_stock+" items available now"
