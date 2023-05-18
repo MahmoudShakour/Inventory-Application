@@ -9,3 +9,5 @@ block content
        div= "category: "+item.category.name
        div= item.price+" $"
        div= item.number_in_stock+" items available now"
+       a(href="/catalog/item/"+item._id+"/update") update item
+       a(href="/catalog/item/"+item._id+"/delete") delete item

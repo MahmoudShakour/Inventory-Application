@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    div(class="content")
+        h1 #{title}
+
+        form(method='POST' action='')
+            div.form-group
+                label(for='name') name:
+                input#name.form-control(type='text', name='name' value=item?item.name:"" )
+                label(for='description') description:
+                input#description.form-control(type='text', name='description' value=item?item.description:"")
+                label(for='category') category:
+                input#category.form-control(type='text', name='category' value=item?item.category.name:"")
+                label(for='price') price:
+                input#price.form-control(type='text', name='price' value=item?item.price:"")
+                label(for='number_in_stock') number_in_stock:
+                input#number_in_stock.form-control(type='text', name='number_in_stock' value=item?item.number_in_stock:"")
+            button.btn.btn-primary(type='submit') Submit
+
+            if error    
+                div "enter valid data" 
